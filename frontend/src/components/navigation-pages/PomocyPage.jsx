@@ -2,7 +2,8 @@ import React from "react";
 import { Button, Box, Container, Typography, Accordion, AccordionSummary, AccordionDetails, styled } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-import { useNavigate } from "react-router-dom"; // Import for navigation
+import { useNavigate } from "react-router-dom";
+import {Trans} from "react-i18next"; // Import for navigation
 
 // Styled page container
 const PageContainer = styled(Container)({
@@ -34,13 +35,13 @@ const ModernAccordion = styled(Accordion)({
 
 // FAQ Data
 const faqItems = [
-    { question: "Podróżnik jest zepsuty, co mam zrobić?", answer: "Skontaktuj się z nami (zakładka Kontakt) i opisz problem. Jeżeli nie znajdujesz się na końcu świata, to może znajdziemy jakiś zamiennik. Lub wykonasz go samodzielnie?" },
-    { question: "Czy mogę zabrać Podróżnika na wakacje?", answer: "Oczywiście! O ile nie będziesz go przetrzymywać zbyt długo. Podróżnik lubi być w ruchu." },
-    { question: "Komu mogę przekazać Podróżnika?", answer: "Podróżnika możesz przekazać każdemu, kto zgodzi się na zasady gry. Może to być Twoja rodzina, przyjaciele, a nawet nieznajomi, o ile rozumieją zasady. Nie chcemy aby Podróżnik zaginął lub został stałą ozdobą na półce." },
-    { question: "Co powinny przedstawiać zdjęcia?", answer: "Zdjęcie powinno przedstawiać Podróżnika w ciekawym miejscu, który odwiedził razem z Tobą. Może to być zabytek, piękny widok, a nawet Twoje ulubione miejsce w mieście. Pamiętaj, aby nie pokazywać adresu zamieszkania." },
-    { question: "Czy mogę zabrać Podróżnika na wycieczkę poza Polskę?", answer: "Oczywiście! Podróżnik uwielbia podróże. Pamiętaj jednak, aby wrócił z Tobą do Polski." },
-    { question: "Nie mogę dodać przystanku na mapie, co mam zrobić?", answer: "Jeżeli formularz nie działa, to skontaktuj się z nami (zakładka Kontakt) i opisz problem. Możesz wysłać nam zdjęcia oraz notatkę, a my dodamy je do dziennika." },
-    { question: "Czy mogę przekazać Podróżnika dalej, jeżeli nie dodałem przystanku na mapie?", answer: "Oczywiście! Przystanek na mapie to dodatkowa atrakcja, ale nie jest obowiązkowy. Pamiętaj jednak, aby przekazać Podróżnika dalej." }
+    { question: <Trans i18nKey="faq.q1" />, answer: <Trans i18nKey="faq.a1" /> },
+    { question: <Trans i18nKey="faq.q2" />, answer: <Trans i18nKey="faq.a2" /> },
+    { question: <Trans i18nKey="faq.q3" />, answer: <Trans i18nKey="faq.a3" /> },
+    { question: <Trans i18nKey="faq.q4" />, answer: <Trans i18nKey="faq.a4" /> },
+    { question: <Trans i18nKey="faq.q5" />, answer: <Trans i18nKey="faq.a5" /> },
+    { question: <Trans i18nKey="faq.q6" />, answer: <Trans i18nKey="faq.a6" /> },
+    { question: <Trans i18nKey="faq.q7" />, answer: <Trans i18nKey="faq.a7" /> }
 ];
 
 const PomocyPage = () => {
@@ -55,7 +56,7 @@ const PomocyPage = () => {
         <PageContainer>
             {/* Header */}
             <Typography variant="h4" sx={{ textAlign: "center", fontWeight: "bold", mb: 4 }}>
-                Pomocy! - FAQ
+                <Trans i18nKey="help" /> - FAQ
             </Typography>
             {/* Back Button */}
             <Box sx={{ mt: 4, mb: 4, alignItems: "center", display: "flex", justifyContent: "center" }}>
@@ -65,7 +66,7 @@ const PomocyPage = () => {
                     onClick={() => handleNavigateHome()} // Navigate to the homepage
                     sx={{ fontWeight: "bold" }}
                 >
-                    Powrót do strony głównej
+                    <Trans i18nKey="back_to_main" />
                 </Button>
             </Box>
             {/* FAQ Section */}

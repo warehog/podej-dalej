@@ -10,6 +10,7 @@ import AdminPage from './components/admin/AdminPage';
 import PomocyPage from './components/navigation-pages/PomocyPage';
 import Header from './components/navigation/Header';
 import { AppContainer } from './components/styled-components';
+import './i18n'
 
 function App() {
     if (process.env.NODE_ENV === 'development') {

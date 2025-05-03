@@ -26,11 +26,12 @@ import {
   OuterSectionContainer,
   OuterSectionIcon,
 } from '../styled-components';
+import {Trans} from "react-i18next";
 
 const steps = [
-  'Dodaj zdjęcia',
-  'Wybierz Lokalizację',
-  'Dodaj Opis'
+  'new_step.add_photo',
+  'new_step.add_location',
+  'new_step.add_description'
 ];
 
 const UploadForm = () => {
@@ -132,10 +133,10 @@ const UploadForm = () => {
         return (
           <Box sx={{ mt: 2 }}>
             <Typography variant="h6" gutterBottom>
-              Krok 1: Dodaj Zdjęcia Przystanku
+                <Trans i18nKey="new_step.step_one_title" />
             </Typography>
             <Typography variant="caption" color="textSecondary">
-              Nie więcej niż 5 zdjęć, które najlepiej opisują to miejsce, Ciebie i Podróżnika.
+                <Trans i18nKey="new_step.step_one_description" />
             </Typography>
             <AttachmentsGrid attachments={attachments} onRemoveFile={handleRemoveFile} />
             <MediaPicker
@@ -148,14 +149,14 @@ const UploadForm = () => {
         return (
           <Box sx={{ mt: 2 }}>
             <Typography variant="h6" gutterBottom>
-              Krok 2: Wybierz Lokalizację na Mapie
+                <Trans i18nKey="new_step.step_two_title" />
             </Typography>
             <Typography variant="caption" color="textSecondary">
-              Użyj mapy, aby w przybliżeniu wskazać miejsce, w którym zrobiłeś zdjęcia.
+                <Trans i18nKey="new_step.step_two_description" />
             </Typography>
             <TextField
               fullWidth
-              label="Wybrana Lokalizacja"
+              label={<Trans i18nKey="new_step.chosen_location" />}
               value={post.location}
               disabled
               margin="normal"
@@ -170,11 +171,11 @@ const UploadForm = () => {
         return (
           <Box sx={{ mt: 2 }}>
             <Typography variant="h6" gutterBottom>
-              Krok 3: Dodaj Notatkę
+                <Trans i18nKey="new_step.step_three_title" />
             </Typography>
             <TextField
               fullWidth
-              label="Napisz coś o tym przystanku..."
+              label={<Trans i18nKey="new_step.describe_location"/>}
               value={post.content}
               onChange={(e) => setPost({ ...post, content: e.target.value })}
               multiline
@@ -183,19 +184,19 @@ const UploadForm = () => {
             />
             <TextField
               fullWidth
-              label="Email / Telegram / Telefon (opcjonalnie)"
+              label={<Trans i18nKey="new_step.contact" />}
               value={post.contact || ''}
               onChange={(e) => setPost({ ...post, contact: e.target.value })}
               margin="normal"
             />
             <Typography variant="caption" color="textSecondary">
-              Twóje dane nie są wymagane, ale w razie zgubienia Podróżnika mogą pomóc w jego odnalezieniu.
+                <Trans i18nKey="new_step.step_three_description" />
             </Typography>
           </Box>
         );
 
       default:
-        return 'Nieznany krok';
+        return <Trans i18nKey="new_step.unknown_step" />;
     }
   };
 
@@ -205,16 +206,16 @@ const UploadForm = () => {
           <AddPhotoAlternateIcon/>
         </OuterSectionIcon>
         <Typography variant="h2" color="primary" gutterBottom>
-          Dodaj Przystanek
+          <Trans i18nKey="new_step.title" />
         </Typography>
         <Typography variant="h6" color="primary">
-          W domu, w lesie czy na szczycie góry? Pokaż miejsce do którego zabrałeś Podróżnika
+            <Trans i18nKey="new_step.description" />
         </Typography>
 
       <Stepper sx={{mt: 2}} activeStep={activeStep} alternativeLabel>
         {steps.map((label) => (
           <Step key={label}>
-            <StepLabel>{label}</StepLabel>
+            <StepLabel><Trans i18nKey={label} /></StepLabel>
           </Step>
         ))}
       </Stepper>
@@ -224,12 +225,12 @@ const UploadForm = () => {
       </Box>
 
       <HorizontalButtonGroup>
-        <Button disabled={activeStep === 0} onClick={handleBack}mvariant="outlined">
-          Cofnij
+        <Button disabled={activeStep === 0} onClick={handleBack} variant="outlined">
+            <Trans i18nKey="button.back" />
         </Button>
         {activeStep < steps.length - 1 ? (
           <Button onClick={handleNext} variant="contained" color="primary">
-            Następny krok
+              <Trans i18nKey="button.next_step" />
           </Button>
         ) : (
           <Button
@@ -238,7 +239,7 @@ const UploadForm = () => {
             color="secondary"
             disabled={isUploading}
           >
-            {isUploading ? 'Przesyłanie...' : 'Prześlij'}
+            {isUploading ? <Trans i18nKey="button.sending" /> : <Trans i18nKey="button.send" />}
           </Button>
         )}
       </HorizontalButtonGroup>

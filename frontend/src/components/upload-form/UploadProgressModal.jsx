@@ -1,6 +1,7 @@
 // UploadProgressModal.jsx
 import React from 'react';
 import { Dialog, Box, CircularProgress, Typography } from '@mui/material';
+import {Trans} from "react-i18next";
 
 const UploadProgressModal = ({ open }) => {
   return (
@@ -16,10 +17,10 @@ const UploadProgressModal = ({ open }) => {
       >
         <CircularProgress size={60} thickness={4} />
         <Typography variant="h6" sx={{ mt: 3 }}>
-          Trwa przesyłanie zdjęć...
+            <Trans i18nKey="new_step.uploading_precessing" />
         </Typography>
         <Typography variant="body2" sx={{ mt: 1, color: 'text.secondary' }}>
-          Nie zamykaj przeglądarki
+            <Trans i18nKey="new_step.uploading_warning" />
         </Typography>
       </Box>
     </Dialog>

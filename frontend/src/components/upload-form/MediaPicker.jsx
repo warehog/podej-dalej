@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { Grid, Button } from '@mui/material';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
+import {Trans} from "react-i18next";
 
 const MediaPicker = ({ onAddFiles }) => {
   const fileInputRef = useRef(null);
@@ -32,7 +33,7 @@ const MediaPicker = ({ onAddFiles }) => {
           component="label"
           startIcon={<AttachFileIcon />}
         >
-          Galeria
+          <Trans i18nKey="gallery" />
           <input
             type="file"
             multiple
@@ -50,7 +51,7 @@ const MediaPicker = ({ onAddFiles }) => {
           component="label"
           startIcon={<CameraAltIcon />}
         >
-          Aparat
+          <Trans i18nKey="camera" />
           <input
             type="file"
             hidden

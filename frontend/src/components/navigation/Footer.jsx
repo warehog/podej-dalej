@@ -72,11 +72,11 @@ const Footer = () => {
         <Box mt={4} textAlign="center">
           <Typography variant="body1">
             Created with ❤️
-            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1 }}>
+          </Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1 }}>
             <SocialLink href="https://github.com/warehog" label="Mateusz Wójcik" Icon={GitHub} target="_blank" />
             <SocialLink href="https://github.com/Fuzyn" label="Michał Wierzbicki"  Icon={GitHub} target="_blank" />
-            </Box>
-          </Typography>
+          </Box>
         </Box>
       </Container>
     </StyledFooter>

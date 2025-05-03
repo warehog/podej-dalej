@@ -1,6 +1,7 @@
 // SuccessSnackbar.jsx
 import React from 'react';
 import { Snackbar, Alert } from '@mui/material';
+import {Trans} from "react-i18next";
 
 const SuccessSnackbar = ({ open, onClose }) => {
   return (
@@ -16,7 +17,7 @@ const SuccessSnackbar = ({ open, onClose }) => {
         sx={{ width: '100%' }}
         onClose={onClose}
       >
-        Wpis dziennika dodany pomyślnie!
+        <Trans i18nKey="new_entry_success" />
       </Alert>
     </Snackbar>
   );
