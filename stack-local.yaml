@@ -48,7 +48,7 @@ services:
       - db
 
   db:
-    image: postgres:15
+    image: postgres:17
     environment:
       DB_ADAPTER: postgresql
       POSTGRES_DB: db_name
@@ -67,7 +67,7 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile
 
   minio:
-    image: minio/minio:RELEASE.2020-07-24T22-43-05Z
+    image: minio/minio
     command: server --address 0.0.0.0:9000 /data
     volumes:
       - 'minio:/data'
@@ -75,8 +75,8 @@ services:
       - 9000:9000
       - 9001:9001
     environment:
-      - MINIO_ACCESS_KEY=administrator
-      - MINIO_SECRET_KEY=administrator
+      - MINIO_ROOT_USER=administrator
+      - MINIO_ROOT_PASSWORD=administrator
       - MINIO_DEFAULT_BUCKETS=default
   
   create-bucket:
