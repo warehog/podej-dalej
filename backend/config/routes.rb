@@ -4,4 +4,7 @@ Rails.application.routes.draw do
       resources :attachments, only: [:destroy]
     end
   end
+
+  devise_for :admins, path: 'sDet4Stsg1S-auth'
+  mount RailsAdmin::Engine => '/sDet4Stsg1S-admin', as: 'rails_admin'
 end
