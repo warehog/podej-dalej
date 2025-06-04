@@ -13,6 +13,10 @@ development:
   username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASS'] %>
 
+test:
+  <<: *default
+  database: dej_chochle_test
+
 production:
   <<: *default
   adapter: <%= ENV['DB_ADAPTER'] %>

@@ -1,20 +1,28 @@
 class Post < ApplicationRecord
   has_many_attached :attachments
 
-  validates :location, presence: true
-  validates :content, presence: true
-  validates :lat, presence: true
-  validates :lng, presence: true
-  validates :contact, presence: true
-  # TODO: disable it for the time being - enable when in production
-  # validate :one_post_per_minute
+  validates :location, :content, :lat, :lng, presence: true
+  validate :one_post_per_minute
   validate :validate_attachments
+
+  def generate_presigned_url(attachment)
+    Rails.application.routes.url_helpers.rails_blob_url(
+      attachment,
+      only_path: false,
+      expires_in: 1.hour,
+      disposition: "inline"
+    )
+  end
 
   private
 
   def one_post_per_minute
-    recent_post = Post.where("created_at >= ?", 1.minute.ago).exists?
-    errors.add(:base, "You can only create one post per minute") if recent_post
+    delay = ENV['CREATE_POST_DELAY_SECOND'].to_i
+
+    return unless delay.positive?
+
+    recent_post = Post.where("created_at >= ?", delay.second.ago).exists?
+    errors.add(:base, "You can only create one post per #{delay} seconds") if recent_post
   end
 
   def validate_attachments
