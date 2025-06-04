@@ -2,6 +2,7 @@ import React from "react";
 import { Modal, Box, Typography, Link, Grid, Button, Container } from "@mui/material";
 import { Email, WhatsApp, Telegram, GitHub } from "@mui/icons-material";
 import styled from "@emotion/styled";
+import {Trans} from "react-i18next";
 
 // Styled modal box
 const ModalBox = styled(Box)({
@@ -21,7 +22,7 @@ const KontaktModal = ({ open, handleClose }) => (
   <Modal open={open} onClose={handleClose}>
     <ModalBox>
       <Typography variant="h6" sx={{ mb: 2 }}>
-        Kontakt
+          <Trans i18nKey="contact" />
       </Typography>
 
       <Container maxWidth="sm">
@@ -116,7 +117,7 @@ const KontaktModal = ({ open, handleClose }) => (
         variant="contained"
         fullWidth
       >
-        Zamknij
+          <Trans i18nKey="close" />
       </Button>
     </ModalBox>
   </Modal>

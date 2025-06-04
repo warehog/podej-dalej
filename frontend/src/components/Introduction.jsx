@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Typography, Divider, Button} from '@mui/material';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
 import NotesIcon from '@mui/icons-material/Notes';
@@ -6,8 +6,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import InfoIcon from '@mui/icons-material/Info';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import InfoCard from './InfoCard';
-
-
+import {Trans} from "react-i18next";
 import {
     OuterSectionContainer,
     OuterSectionIcon,
@@ -15,12 +14,7 @@ import {
     HorizontalButtonGroup,
 } from './styled-components';
 
-const steps = [
-    { icon: AddAPhotoIcon, label: 'Zrób zdjęcia', description: 'Pochwal się gdzie jest Podróżnik' },
-    { icon: NotesIcon, label: 'Napisz historię', description: 'Napisz coś o sobie i o swojej przygodzie z Podróżnikiem.' },
-    { icon: AddCircleIcon, label: 'Dodaj przystanek', description: 'Użyj formularza na końcu strony, aby dodać przystanek.' },
-    { icon: PersonAddAlt1Icon, label: 'Podaj dalej', description: 'Przekaż Podróżnika wybranej przez siebie osobie.' },
-];
+const stepsIcons = [AddAPhotoIcon, NotesIcon, AddCircleIcon, PersonAddAlt1Icon]
 
 const Introduction = ({ onScrollToMultiPost, onScrollToCreatePost }) => {
     return (
@@ -30,18 +24,17 @@ const Introduction = ({ onScrollToMultiPost, onScrollToCreatePost }) => {
             </OuterSectionIcon>
 
             <Typography variant="h1" color="primary" gutterBottom>
-                Hej!
+                <Trans i18nKey="hi" />
             </Typography>
 
             <Divider sx={{ my: 2 }} />
 
             <Typography variant="h4" gutterBottom>
-                Dobrze trafiłeś!
+                <Trans i18nKey="introduction.congratulations" />
             </Typography>
 
             <Typography variant="body1" gutterBottom>
-                Znalazłeś, lub ktoś podarował Ci Podróżnika? Właśnie stałeś nowym Posiadaczem!
-                <br />Weź udział w tej niezwykłej zabawie i poznaj historie Podróżnika
+                <Trans i18nKey="introduction.invitation" />
             </Typography>
 
             {/* <Typography variant="body1" gutterBottom>
@@ -51,37 +44,33 @@ const Introduction = ({ onScrollToMultiPost, onScrollToCreatePost }) => {
             <Divider sx={{ my: 2 }} />
 
             <Typography variant="h5" gutterBottom>
-                Na czym to polega?
+                <Trans i18nKey="instruction.title" />
             </Typography>
 
             <Typography variant="body1" gutterBottom className='info-section-paragraph'>
-                Podróżnik to figurka, którą <b>przekazujesz dalej wybranej przez siebie osobie.</b> Wybierz mądrze, kto stanie się nowym Posiadaczem!
+                <Trans i18nKey="instruction.part_one" />
             </Typography>
             <Typography variant="body1" gutterBottom className='info-section-paragraph'>
-                Zanim to zrobisz, <b>zrób zdjęcia, napisz historię i dodaj przystanek na mapie</b> za pomocą formularza na dole strony.
+                <Trans i18nKey="instruction.part_two" />
             </Typography>
             <Typography variant="body1" gutterBottom>
-                <b>Szczęśliwy Podróżnik to taki, który nie stoi w miejscu!</b>
+                <Trans i18nKey="instruction.summary" />
             </Typography>
 
             <Divider sx={{ my: 2 }} />
 
             <InfoStepsCardsContainer>
-                {steps.map((step, index) => {
-                    const Icon = step.icon;
-                    return (
-                        <InfoCard key={index} title={step.label} description={step.description} icon={Icon} />
-                    )
+                {stepsIcons.map((icon, index) => {
+                    return <InfoCard key={index} index={index} icon={icon} />
                 })}
             </InfoStepsCardsContainer>
 
-            {/* Buttons */}
             <HorizontalButtonGroup>
                 <Button variant="contained" color="primary" onClick={onScrollToMultiPost}>
-                    Przejdź do galerii
+                    <Trans i18nKey="button.gallery" />
                 </Button>
                 <Button variant="contained" color="secondary" onClick={onScrollToCreatePost}>
-                    Dodaj przystanek
+                    <Trans i18nKey="button.add_step" />
                 </Button>
             </HorizontalButtonGroup>
 

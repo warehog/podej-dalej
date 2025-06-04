@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Typography } from '@mui/material';
-import { getPosts } from "./../apis/PostApi";
+import { getPosts } from "../apis/PostApi";
 
 import Timeline from './timeline/Timeline';
 import TimelineItem from './timeline/TimelineItem';
@@ -8,6 +8,7 @@ import TimelineItem from './timeline/TimelineItem';
 import MapIcon from '@mui/icons-material/Map';
 
 import { OuterSectionContainer, OuterSectionIcon } from './styled-components';
+import {Trans} from "react-i18next";
 
 const Gallery = () => {
     const [posts, setPosts] = useState([]);
@@ -22,7 +23,7 @@ const Gallery = () => {
                 <MapIcon/>
             </OuterSectionIcon>
             <Typography variant="h6" gutterBottom>
-                Najnowsze przystanki
+                <Trans i18nKey="newest_steps" />
             </Typography>
             <Timeline>
                 {posts.map((post, index) => (

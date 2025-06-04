@@ -3,8 +3,9 @@ import { useTheme, useMediaQuery, Typography, Container } from '@mui/material';
 import { InfoStepsCard, InfoStepsCardIconBox, InfoStepsCardContent } from './styled-components';
 import PropTypes from 'prop-types';
 import './InfoCard.css'
+import {Trans} from "react-i18next";
 
-const InfoCard = ({ title, description, icon }) => {
+const InfoCard = ({ index, icon }) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const Icon = icon;
@@ -22,17 +23,17 @@ const InfoCard = ({ title, description, icon }) => {
                             <Icon />
                         </InfoStepsCardIconBox>
                         <Typography variant="h6" gutterBottom>
-                            {title}
+                            <Trans i18nKey={`instruction_steps.${index}_label`} />
                         </Typography>
                     </Container>
                 )}
                 {!isMobile && (
                     <Typography variant="h6" gutterBottom>
-                        {title}
+                        <Trans i18nKey={`instruction_steps.${index}_label`} />
                     </Typography>
                 )}
                 <div className='info-card-description'>
-                    {description}
+                    <Trans i18nKey={`instruction_steps.${index}_description`} />
                 </div>
             </InfoStepsCardContent>
         </InfoStepsCard>
@@ -40,8 +41,7 @@ const InfoCard = ({ title, description, icon }) => {
 };
 
 InfoCard.propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired,
     icon: PropTypes.element,
 };
 

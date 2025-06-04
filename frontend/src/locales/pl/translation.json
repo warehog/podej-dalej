@@ -1,0 +1,83 @@
+{
+  "contact": "Kontakt",
+  "help": "Pomocy!",
+  "hi": "Hej!",
+  "gallery": "Galeria",
+  "camera": "Aparat",
+  "newest_steps": "Najnowsze przystanki",
+  "close": "Zamknij",
+  "back_to_main": "Powrót do strony głównej",
+  "ago": "temu",
+  "introduction": {
+    "congratulations": "Dobrze trafiłeś!",
+    "invitation": "Znalazłeś, lub ktoś podarował Ci Podróżnika? Właśnie stałeś nowym Posiadaczem!\n <br />Weź udział w tej niezwykłej zabawie i poznaj historie Podróżnika"
+  },
+  "instruction": {
+    "title": "Na czym to polega?",
+    "part_one": "Podróżnik to figurka, którą <strong>przekazujesz dalej wybranej przez siebie osobie.</strong> Wybierz mądrze, kto stanie się nowym Posiadaczem!",
+    "part_two": "Zanim to zrobisz, <strong>zrób zdjęcia, napisz historię i dodaj przystanek na mapie</strong> za pomocą formularza na dole strony.",
+    "summary": "<strong>Szczęśliwy Podróżnik to taki, który nie stoi w miejscu!</strong>"
+  },
+  "button": {
+    "gallery": "Przejdź do galerii",
+    "add_step": "Dodaj przystanek",
+    "next_step": "Następny krok",
+    "back": "Cofnij",
+    "sending": "Przesyłanie...",
+    "send": "Prześlij"
+  },
+  "instruction_steps": {
+    "0_label": "Zrób zdjęcia",
+    "0_description": "Pochwal się gdzie jest Podróżnik",
+    "1_label": "Napisz historię",
+    "1_description": "Napisz coś o sobie i o swojej przygodzie z Podróżnikiem.",
+    "2_label": "Dodaj przystanek",
+    "2_description": "Użyj formularza na końcu strony, aby dodać przystanek.",
+    "3_label": "Podaj dalej",
+    "3_description": "Przekaż Podróżnika wybranej przez siebie osobie."
+  },
+  "alerts": {
+    "new_entry_success": "Wpis dziennika dodany pomyślnie!"
+  },
+  "new_step": {
+    "title": "Dodaj Przystanek",
+    "description": "W domu, w lesie czy na szczycie góry? Pokaż miejsce do którego zabrałeś Podróżnika",
+    "add_photo": "Dodaj zdjęcia",
+    "add_location": "Wybierz Lokalizację",
+    "add_description": "Dodaj Opis",
+    "chosen_location": "Wybrana Lokalizacja",
+    "describe_location": "Napisz coś o tym przystanku...",
+    "contact": "Email / Telegram / Telefon (opcjonalnie)",
+    "step_one_title": "Krok 1: Dodaj Zdjęcia Przystanku",
+    "step_one_description": "Nie więcej niż 5 zdjęć, które najlepiej opisują to miejsce, Ciebie i Podróżnika.",
+    "step_two_title": "Krok 2: Wybierz Lokalizację na Mapie",
+    "step_two_description": "Użyj mapy, aby w przybliżeniu wskazać miejsce, w którym zrobiłeś zdjęcia.",
+    "step_three_title": "Krok 3: Dodaj Notatkę",
+    "step_three_description": "Twoje dane nie są wymagane, ale w razie zgubienia Podróżnika mogą pomóc w jego odnalezieniu.",
+    "unknown_step": "Nieznany krok",
+    "uploading_precessing": "Trwa przesyłanie zdjęć...",
+    "uploading_warning": "Nie zamykaj przeglądarki"
+  },
+  "faq": {
+    "q1": "Podróżnik jest zepsuty, co mam zrobić?",
+    "a1": "Contact us (Contact tab) and describe the problem. If you're not at the end of the world, maybe we can find a replacement. Or make it yourself?",
+    "q2": "Czy mogę zabrać Podróżnika na wakacje?",
+    "a2": "Oczywiście! O ile nie będziesz go przetrzymywać zbyt długo. Podróżnik lubi być w ruchu.",
+    "q3": "Komu mogę przekazać Podróżnika?",
+    "a3": "Podróżnika możesz przekazać każdemu, kto zgodzi się na zasady gry. Może to być Twoja rodzina, przyjaciele, a nawet nieznajomi, o ile rozumieją zasady. Nie chcemy aby Podróżnik zaginął lub został stałą ozdobą na półce.",
+    "q4": "Co powinny przedstawiać zdjęcia?",
+    "a4": "Zdjęcie powinno przedstawiać Podróżnika w ciekawym miejscu, który odwiedził razem z Tobą. Może to być zabytek, piękny widok, a nawet Twoje ulubione miejsce w mieście. Pamiętaj, aby nie pokazywać adresu zamieszkania.",
+    "q5": "Czy mogę zabrać Podróżnika na wycieczkę poza Polskę?",
+    "a5": "Oczywiście! Podróżnik uwielbia podróże. Pamiętaj jednak, aby wrócił z Tobą do Polski.",
+    "q6": "Nie mogę dodać przystanku na mapie, co mam zrobić?",
+    "a6": "Jeżeli formularz nie działa, to skontaktuj się z nami (zakładka Kontakt) i opisz problem. Możesz wysłać nam zdjęcia oraz notatkę, a my dodamy je do dziennika.",
+    "q7": "Czy mogę przekazać Podróżnika dalej, jeżeli nie dodałem przystanku na mapie?",
+    "a7": "Oczywiście! Przystanek na mapie to dodatkowa atrakcja, ale nie jest obowiązkowy. Pamiętaj jednak, aby przekazać Podróżnika dalej."
+  },
+  "time_periods": {
+    "second": "sekund",
+    "minutes": "minut",
+    "hours": "godzin",
+    "days": "dni"
+  }
+}

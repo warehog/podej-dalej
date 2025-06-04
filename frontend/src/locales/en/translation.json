@@ -1,0 +1,83 @@
+{
+  "contact": "Contact",
+  "help": "Help!",
+  "hi": "Hi!",
+  "gallery": "Gallery",
+  "camera": "Camera",
+  "newest_steps": "Newest steps",
+  "close": "Close",
+  "back_to_main": "Return to home page",
+  "ago": "ago",
+  "introduction": {
+    "congratulations": "You've come to the right place!",
+    "invitation": "Have you found or been gifted a Traveler? You have just become a new Owner!\n <br />Take part in this extraordinary game and learn the story of the Traveler"
+  },
+  "instruction": {
+    "title": "What does it involve?",
+    "part_one": "The Traveler is a figurine that you <strong>pass on to the person of your choice.</strong> Choose wisely who will become the new Owner!",
+    "part_two": "Before you do, <strong>take photos, write a story, and add your stop to the map</strong> using the form at the bottom of the page.",
+    "summary": "<strong>A happy traveler is one who never stands still!</strong>"
+  },
+  "button": {
+    "gallery": "Go to gallery",
+    "add_step": "Add a step",
+    "next_step": "Next step",
+    "back": "Back",
+    "sending": "Sending...",
+    "send": "Send"
+  },
+  "instruction_steps": {
+    "0_label": "Take a photo",
+    "0_description": "Show off where the Traveler is",
+    "1_label": "Write a story",
+    "1_description": "Write something about yourself and your adventure with the Traveler.",
+    "2_label": "Add step",
+    "2_description": "Use the form at the end of the page to add a step.",
+    "3_label": "Pass it on",
+    "3_description": "Pass the Traveler on to the person of your choice."
+  },
+  "alerts": {
+    "new_entry_success": "Journal entry added successfully!"
+  },
+  "new_step": {
+    "title": "Add a step",
+    "description": "At home, in the forest or on a mountaintop? Show us a place you took from your trip",
+    "add_photo": "Add photos",
+    "add_location": "Select location",
+    "add_description": "Add description",
+    "chosen_location": "Chosen Location",
+    "describe_location": "Write something about this stop...",
+    "contact": "Email / Telegram / Phone (optional)",
+    "step_one_title": "Step 1: Add Photos of the Bus Stop",
+    "step_one_description": "No more than 5 photos that best describe the place, you and the Traveler.",
+    "step_two_title": "Step 2: Select Location on Map",
+    "step_two_description": "Use the map to roughly pinpoint where you took your photos.",
+    "step_three_title": "Step 3: Add a Note",
+    "step_three_description": "Your details are not required, but they may help locate your Traveler if it is lost.",
+    "unknown_step": "Unknown step",
+    "uploading_precessing": "Uploading photos...",
+    "uploading_warning": "Don't close your browser"
+  },
+  "faq": {
+    "q1": "The traveler is broken, what should I do?",
+    "a1": "Contact us (Contact tab) and describe the problem. If you're not at the end of the world, we'll send you a new one.",
+    "q2": "Can I take the Traveler on holiday?",
+    "a2": "Of course! As long as you don't keep him too long. The traveler likes to be on the move.",
+    "q3": "Who can I pass the Traveler on to?",
+    "a3": "You can give the Traveler to anyone who agrees to the rules of the game. This can be your family, friends, or even strangers, as long as they understand the rules. We don't want the Traveler to get lost or become a permanent decoration on a shelf.",
+    "q4": "What should the photos show?",
+    "a4": "The photo should show the Traveler in an interesting place that they visited with you. It can be a monument, a beautiful view, or even your favorite place in the city. Remember not to show your home address.",
+    "q5": "Can I take the Traveler on a trip outside Poland?",
+    "a5": "Of course! A traveler loves to travel. But remember, he should come back to Poland with you.",
+    "q6": "I can't add a stop on the map, what should I do?",
+    "a6": "If the form doesn't work, please contact us (Contact tab) and describe the problem. You can send us photos and a note, and we'll add them to the log.",
+    "q7": "Can I pass on a Traveler if I haven't added a stop on the map?",
+    "a7": "Of course! A stop on the map is an additional attraction, but it is not mandatory. However, remember to pass the Traveler on."
+  },
+  "time_periods": {
+    "second": "second",
+    "minutes": "minutes",
+    "hours": "hours",
+    "days": "days"
+  }
+}

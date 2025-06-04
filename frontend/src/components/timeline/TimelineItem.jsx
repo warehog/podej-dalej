@@ -8,23 +8,24 @@ import { Paper, Typography, useTheme, useMediaQuery} from '@mui/material';
 import PlaceIcon from '@mui/icons-material/Place';
 import ImageGallery from '../image-gallery/ImageGallery';
 import './TimelineItem.css';
+import {Trans, useTranslation} from "react-i18next";
 
-const timeAgo = (dateString) => {
+const timeAgo = (dateString, t) => {
   const date = new Date(dateString);
   const now = new Date();
   const diffInSeconds = Math.floor((now - date) / 1000);
 
   if (diffInSeconds < 60) {
-    return `${diffInSeconds} sekund${getValueAppendix(diffInSeconds)}`;
+    return `${diffInSeconds} ${t("time_periods.second")}${getValueAppendix(diffInSeconds)}`;
   } else if (diffInSeconds < 3600) {
     const minutes = Math.floor(diffInSeconds / 60);
-    return `${minutes} minut${getValueAppendix(minutes)}`;
+    return `${minutes} ${t("time_periods.minutes")}${getValueAppendix(minutes)}`;
   } else if (diffInSeconds < 86400) {
     const hours = Math.floor(diffInSeconds / 3600);
-    return `${hours} godzin${getValueAppendix(hours)}`;
+    return `${hours} ${t("time_periods.hours")}${getValueAppendix(hours)}`;
   } else {
     const days = Math.floor(diffInSeconds / 86400);
-    return `${days} dni${getValueAppendix(days)}`;
+    return `${days} ${t("time_periods.days")}${getValueAppendix(days)}`;
   }
 };
 
@@ -48,6 +49,8 @@ const getValueAppendix = (value) => {
 const TimelineItem = ({ time, place, header, paragraph, attachments }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const { t } = useTranslation();
 
   return (
     <TimelineItemMUI
@@ -79,7 +82,7 @@ const TimelineItem = ({ time, place, header, paragraph, attachments }) => {
             <span className="separator-dot">•</span>
           </Typography>
           <Typography variant="body2" className="time-ago">
-            {timeAgo(time)} temu
+            {timeAgo(time, t)} <Trans i18nKey="ago" />
           </Typography>
 
 
