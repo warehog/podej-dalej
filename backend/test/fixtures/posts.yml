@@ -1,11 +1,36 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  location: MyString
-  title: MyString
-  content: MyText
+  location: "Warsaw, Poland"
+  content: "This is the first test post"
+  lat: "52.2297"
+  lng: "21.0122"
+  contact: "test@example.com"
 
 two:
-  location: MyString
-  title: MyString
-  content: MyText
+  location: "Krakow, Poland"
+  content: "This is the second test post"
+  lat: "50.0647"
+  lng: "19.9450"
+  contact: "+48123456789"
+
+three:
+  location: "Gdansk, Poland"
+  content: "This is the third test post with a longer description to test content handling"
+  lat: "54.3520"
+  lng: "18.6466"
+  contact: "gdansk@example.com"
+
+four:
+  location: "Wroclaw, Poland"
+  content: "This is the fourth test post"
+  lat: "51.1079"
+  lng: "17.0385"
+  contact: "+48987654321"
+
+five:
+  location: "Poznan, Poland"
+  content: "This is the fifth test post with special characters: !@#$%^&*()"
+  lat: "52.4064"
+  lng: "16.9252"
+  contact: "contact@poznan-test.pl"
